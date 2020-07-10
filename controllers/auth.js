@@ -32,7 +32,7 @@ const signIn = (req, res) => {
       console.log("No user found");
       return res.sendStatus(500);
     }
-    console.log("toto");
+
     const token = await jwt.sign(user, "secret");
     return res.status(200).send({
       user,

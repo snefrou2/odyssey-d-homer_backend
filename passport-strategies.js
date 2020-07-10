@@ -10,7 +10,6 @@ passport.use(
       passwordField: "password",
     },
     (formMail, formPass, done) => {
-      console.log(formPass);
       connection.query(
         "SELECT id, email, password FROM users WHERE email=?",
         [formMail],

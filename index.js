@@ -1,15 +1,16 @@
 require("dotenv").config();
 const express = require("express");
-
+const cors = require("cors");
 const app = express();
 
 const auth = require("./routes/auth");
 
 app.use(express.json());
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
 // Router
-app.use("/signup", auth);
+app.use("/auth", auth);
 
 app.listen(process.env.PORT, (err) => {
   if (err) {

@@ -4,7 +4,7 @@ GRANT ALL PRIVILEGES ON your_database_name.* TO your_user_name@localhost;
 use your_database_name;
 
 CREATE TABLE `users` (
-  `id` int NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
   `email` varchar(100) NOT NULL,
   `password` varchar(45) NOT NULL,
   `name` varchar(45) NOT NULL,
